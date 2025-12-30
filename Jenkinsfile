@@ -299,10 +299,10 @@ pipeline {
                             if not exist %BUILD_DIR% mkdir %BUILD_DIR%
                             
                             echo Step 3: Package application files...
-                            xcopy app.py %BUILD_DIR%\ /Y
-                            xcopy requirements.txt %BUILD_DIR%\ /Y
-                            xcopy templates %BUILD_DIR%\templates\ /E /I /Y
-                            xcopy static %BUILD_DIR%\static\ /E /I /Y
+                            xcopy app.py %BUILD_DIR%\\ /Y
+                            xcopy requirements.txt %BUILD_DIR%\\ /Y
+                            xcopy templates %BUILD_DIR%\\templates\\ /E /I /Y
+                            xcopy static %BUILD_DIR%\\static\\ /E /I /Y
                             echo Application files packaged
                             
                             echo Step 4: Create deployment archive...
@@ -314,7 +314,7 @@ pipeline {
                                 echo Build Number: %BUILD_NUMBER%
                                 echo Build Date: %date% %time%
                                 echo Build Status: SUCCESS
-                            ) > %BUILD_DIR%\BUILD_INFO.txt
+                            ) > %BUILD_DIR%\\BUILD_INFO.txt
                             echo Build completed successfully!
                         '''
                     }
@@ -373,7 +373,7 @@ pipeline {
                             echo Deployment directory ready
                             
                             echo Step 2: Copy application files...
-                            xcopy %BUILD_DIR%\* %DEPLOY_DIR%\ /E /I /Y
+                            xcopy %BUILD_DIR%\\* %DEPLOY_DIR%\\ /E /I /Y
                             echo Application files deployed
                             
                             echo Step 3: Install dependencies in production...
