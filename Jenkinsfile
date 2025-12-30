@@ -44,7 +44,7 @@ pipeline {
                         $class: 'GitSCM',
                         branches: [[name: '*/main']],
                         userRemoteConfigs: [[
-                            url: '${GITHUB_REPO}',
+                            url: 'https://github.com/Ayila890/SSD-Final.git',
                             credentialsId: 'github-credentials'  // Configure in Jenkins credentials
                         ]]
                     ])
