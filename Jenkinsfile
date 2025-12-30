@@ -386,7 +386,7 @@ pipeline {
                             echo.
                             echo For Windows Service Integration:
                             echo 1. Install NSSM: https://nssm.cc/
-                            echo 2. Run: nssm install Flask-App "C:\path\to\gunicorn.exe" "wsgi:app"
+                            echo 2. Run: nssm install Flask-App "C:\\path\\to\\gunicorn.exe" "wsgi:app"
                             echo 3. Run: nssm start Flask-App
                         '''
                     }
